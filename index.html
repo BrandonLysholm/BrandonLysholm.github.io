@@ -18,14 +18,16 @@
 		   </div>
 		   <div class="col-md-8">
 			   <h2>About me</h2>
-			   <p>Insert short blurb</p>
+			   <p>Web Developer and AV Tech that specializes in meeting the unique tech needs of churches</p>
 	   	   </div>
 	   </div>
 	   <div class="row">
 		<h1>My Services:</h1>
 	   </div>
-	   <div class="row">
-		   <div class="col-md-6"  onmouseover="webDevShowDetails()" onmouseout="webDevHideDetails()">
+<!--        FIRST ROW OF SERVICES SECTION-->
+		<div class="row">
+<!--            WEB DEVELOPMENT SECTION-->
+		   <div class="col-md-6"  onmouseover="showDetails('webDev')" onmouseout="hideDetails('webDev')">
 				<div id="webDevPrimary">
 					<img class="img-fluid" src="./images/IMG_8271-edit.jpg" alt="Images of code on a screen"/>
 					<h2>Web development</h2>
@@ -37,10 +39,18 @@
 					</div>
 				</div>
 		   </div>
-		   <div class="col-md-6">
-			<img class ="img-fluid" src="./images/training.jpg" alt="Brandon training a sountech" />
-		   	<h2>AV Training and System Installation</h2>
-		   </div>
+<!--            AV TRAINING SECTION-->
+            <div class="col-md-6" onmouseover="showDetails('avTraining')" onmouseout="hideDetails('avTraining')">
+                <div id="avTrainingPrimary">
+                    <img class ="img-fluid" src="./images/training.jpg" alt="Brandon training a sountech" />
+                    <h2>AV Training and System Installation</h2>
+                </div>
+                <div id="avTrainingSecondary" style="display:none" class="card">
+                    <h2>AV Training and System Installation</h2>
+                    <p>Here I can add more details</p>
+                </div>
+            </div>
+
 	   </div>
 	   <div class="row">
 		<div class="col-md-6">
@@ -56,24 +66,37 @@
 	   <!-- Insert Contact Section here -->
 	</div>
 	<script>
- 
-		// Function that handles hiding the overview pane of the web dev, and shows more details 
-		function webDevShowDetails() {
-			webDevPrimary = document.getElementById('webDevPrimary')
-			webDevSecondary = document.getElementById('webDevSecondary')
 
-			// Changing attributes
-			webDevSecondary.removeAttribute('style')
-			webDevPrimary.setAttribute('style', 'display:none')
-		}
+        // Function to show the details pane of whatever section calls it on mouse over event
+        function showDetails(section) {
+            if (section == 'webDev') {
+                primaryElement = document.getElementById('webDevPrimary')
+                secondaryElement = document.getElementById('webDevSecondary')
 
-		function webDevHideDetails() {
-			webDevPrimary = document.getElementById('webDevPrimary')
-			webDevSecondary = document.getElementById('webDevSecondary')
-			// Changing attributes
-			webDevPrimary.removeAttribute('style')
-			webDevSecondary.setAttribute('style', 'display:none')
-		}
+            } else if(section == 'avTraining') {
+                primaryElement = document.getElementById('avTrainingPrimary')
+                secondaryElement = document.getElementById('avTrainingSecondary')
+                filePath = './images/avTrainingBW.jpg'
+
+            }
+            primaryElement.setAttribute('style', 'display:none')
+            secondaryElement.removeAttribute('style')
+            secondaryElement.setAttribute('style', 'background: url(' + filePath + '); width: 50%')
+        }
+
+        // function to hide the details pane of whatever section calls it on mouse leave event
+        function hideDetails(section) {
+            if (section == 'webDev') {
+                primaryElement = document.getElementById('webDevPrimary')
+                secondaryElement = document.getElementById('webDevSecondary')
+            } else if(section == 'avTraining') {
+                primaryElement = document.getElementById('avTrainingPrimary')
+                secondaryElement = document.getElementById('avTrainingSecondary')
+            }
+            primaryElement.removeAttribute('style')
+            secondaryElement.setAttribute('style', 'display:none')
+        }
+
 	</script>
     </main>
   </body>
