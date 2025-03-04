@@ -10,15 +10,15 @@
     <body>
     	<main>
 			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<img class ="img-fluid" src="./images/training.jpg" alt="Brandon training a sountech" />
-					</div>
-					<div class="col-md-6 card" style="background: url('./images/avTrainingBW.jpg'); background-color: rgba(255,255,255,0.6);  background-size: cover; background-blend-mode: lighten;) ">
-						<h2>Header Stuff</h2>
-						<p>short blurb can go here</p>
-					</div>
-				</div>
+<!--				<div class="row">-->
+<!--					<div class="col-md-6">-->
+<!--						<img class ="img-fluid" src="./images/training.jpg" alt="Brandon training a sountech" />-->
+<!--					</div>-->
+<!--					<div class="col-md-6 card" style="background: url('./images/avTrainingBW.jpg'); background-color: rgba(255,255,255,0.6);  background-size: cover; background-blend-mode: lighten;) ">-->
+<!--						<h2>Header Stuff</h2>-->
+<!--						<p>short blurb can go here</p>-->
+<!--					</div>-->
+<!--				</div>-->
 <!--		OVERVIEW ROW-->
 	   <div class="row">
 		   <div class="col-md-4">
@@ -33,43 +33,57 @@
 		<h1>My Services:</h1>
 	   </div>
 <!--        FIRST ROW OF SERVICES SECTION-->
-		<div class="row align-items-stretch">
+		<div class="row align-items-stretch mb-2">
 <!--            WEB DEVELOPMENT SECTION-->
-		   <div class="col-md-6"  onmouseover="showDetails('webDev')" onmouseout="hideDetails('webDev')">
-				<div id="webDevPrimary">
-					<img class="img-fluid" src="./images/IMG_8271-edit.jpg" alt="Images of code on a screen"/>
-					<h2>Web development</h2>
-				</div>
-				<div id="webDevSecondary" style="display:none" class="card">
+		   <div id="webDevPrimary" class="col-md-6"  onmouseover="showDetails('webDev')" onmouseout="hideDetails('webDev')">
+
+					<img class="img-fluid" src="./images/webDevTitle.jpg" alt="Images of code on a screen"/>
+		   </div>
+			<div id="webDevSecondary" class="col-md-6 card" style="display:none" onmouseover="showDetails('webDev')" onmouseout="hideDetails('webDev')" >
+
+
 					<div class="card-body">
 						<h2 class="card-title">Web Development</h2>
 						<p class="card-text">Here is where I will put more details</p>
 					</div>
-				</div>
-		   </div>
+			</div>
 <!--            AV TRAINING SECTION-->
-            <div class="col-md-6" onmouseover="showDetails('avTraining')" onmouseout="hideDetails('avTraining')">
-                <div id="avTrainingPrimary">
-                    <img class ="img-fluid" src="./images/training.jpg" alt="Brandon training a sountech" />
-                    <h2>AV Training and System Installation</h2>
-                </div>
-                <div id="avTrainingSecondary" style="display:none" class="card">
-                    <h2>AV Training and System Installation</h2>
-                    <p>Here I can add more details about the different</p>
-                </div>
+            <div id="avTrainingPrimary" class="col-md-6" onmouseover="showDetails('avTraining')" onmouseout="hideDetails('avTraining')">
+				<img class ="img-fluid" src="./images/trainingTitle.jpg" alt="Brandon training a sountech" />
+
             </div>
+			<div id="avTrainingSecondary" class="col-md-6 card" style="display:none" onmouseover="showDetails('avTraining')" onmouseout="hideDetails('avTraining')" >
+				<h2 class="card-title">AV Training and Installation</h2>
+				<p class="card-text">Here is where I will put more details</p>
+			</div>
 
 	   </div>
-	   <div class="row">
-		<div class="col-md-6">
-		 <img class="img-fluid" src="./images/IMG_1076 edit.jpg" alt="Video switcher" />
-		 <h2>Video Production</h2>
-		</div>
-		<div class="col-md-6">
-		 <img class ="img-fluid" src="./images/IMG_8262-edit.jpg" alt="Picture of a digital soundboard" />
-		 <h2>A/V Tech for Events</h2>
-		</div>
-	</div>
+				<!--        SECOND ROW OF SERVICES SECTION-->
+				<div class="row align-items-stretch mb-2">
+					<!--            VIDEO PRODUCTION SECTION-->
+					<div id="videoPrimary" class="col-md-6"  onmouseover="showDetails('video')" onmouseout="hideDetails('video')">
+
+						<img class="img-fluid" src="./images/videoTitle.jpg" alt="Images of code on a screen"/>
+					</div>
+					<div id="videoSecondary" class="col-md-6 card" style="display:none" onmouseover="showDetails('video')" onmouseout="hideDetails('video')" >
+
+
+						<div class="card-body">
+							<h2 class="card-title">Video Production</h2>
+							<p class="card-text">Here is where I will put more details</p>
+						</div>
+					</div>
+					<!--            AV TRAINING SECTION-->
+					<div id="avEventPrimary" class="col-md-6" onmouseover="showDetails('avEvent')" onmouseout="hideDetails('avEvent')">
+						<img class ="img-fluid" src="./images/avTitle.jpg" alt="Brandon training a sountech" />
+
+					</div>
+					<div id="avEventSecondary" class="col-md-6 card" style="display:none" onmouseover="showDetails('avEvent')" onmouseout="hideDetails('avEvent')" >
+						<h2 class="card-title">AV Tech for Events</h2>
+						<p class="card-text">Here is where I will put more details</p>
+					</div>
+
+				</div>
 	   <!-- Insert section here of referrals -->
 	   <!-- Insert Contact Section here -->
 	</div>
@@ -80,16 +94,24 @@
             if (section == 'webDev') {
                 primaryElement = document.getElementById('webDevPrimary')
                 secondaryElement = document.getElementById('webDevSecondary')
+				imgPath = './images/webDevBW.jpg'
 
             } else if(section == 'avTraining') {
                 primaryElement = document.getElementById('avTrainingPrimary')
                 secondaryElement = document.getElementById('avTrainingSecondary')
-                filePath = './images/avTrainingBW.jpg'
-
-            }
+				imgPath = './images/avTrainingBW.jpg'
+            } else if (section == 'video') {
+				primaryElement = document.getElementById('videoPrimary')
+				secondaryElement = document.getElementById('videoSecondary')
+				imgPath = './images/videoBW.jpg'
+			} else if (section == 'avEvent') {
+				primaryElement = document.getElementById('avEventPrimary')
+				secondaryElement = document.getElementById('avEventSecondary')
+				imgPath = './images/avBW.jpg'
+			}
             primaryElement.setAttribute('style', 'display:none')
             secondaryElement.removeAttribute('style')
-            secondaryElement.setAttribute('style', 'background: url(' + filePath + '); background-size: cover')
+			secondaryElement.setAttribute('style', "background: url('"+imgPath+"'); background-color: rgba(255,255,255,0.6);  background-size: cover; background-blend-mode: lighten;) ")
         }
 
         // function to hide the details pane of whatever section calls it on mouse leave event
@@ -100,7 +122,13 @@
             } else if(section == 'avTraining') {
                 primaryElement = document.getElementById('avTrainingPrimary')
                 secondaryElement = document.getElementById('avTrainingSecondary')
-            }
+            } else if (section == 'video') {
+				primaryElement = document.getElementById('videoPrimary')
+				secondaryElement = document.getElementById('videoSecondary')
+			} else if (section == 'avEvent') {
+				primaryElement = document.getElementById('avEventPrimary')
+				secondaryElement = document.getElementById('avEventSecondary')
+			}
             primaryElement.removeAttribute('style')
             secondaryElement.setAttribute('style', 'display:none')
         }
