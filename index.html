@@ -9,63 +9,62 @@
 	</head>
     <body>
     	<main>
-			<div class="container">
-<!--				<div class="row">-->
-<!--					<div class="col-md-6">-->
-<!--						<img class ="img-fluid" src="./images/training.jpg" alt="Brandon training a sountech" />-->
-<!--					</div>-->
-<!--					<div class="col-md-6 card" style="background: url('./images/avTrainingBW.jpg'); background-color: rgba(255,255,255,0.6);  background-size: cover; background-blend-mode: lighten;) ">-->
-<!--						<h2>Header Stuff</h2>-->
-<!--						<p>short blurb can go here</p>-->
-<!--					</div>-->
-<!--				</div>-->
+			<div>
+
 <!--		OVERVIEW ROW-->
-	   <div class="row">
-		   <div class="col-md-4">
-		   	<img class="img-fluid" src="" alt="Image of Brandon" />
+	   <div class="row justify-content-center m-3">
+		   <div class="col-md-2">
+		   	<img class="img-fluid" src="./images/placeholder.png" alt="Image of Brandon" />
 		   </div>
-		   <div class="col-md-8">
-			   <h2>About me</h2>
-			   <p>Web Developer and AV Tech that specializes in meeting the unique tech needs of churches</p>
+		   <div class="col-md-5">
+			   <h1>Brandon Lysholm</h1>
+			   <h5>Web Developer and AV Tech that specializes in meeting the unique tech needs of churches.</h5>
+			   <p>
+				   If you need help getting the tech needs of your churches under control, I can help. I am skilled in the tech booth that helps make the Sunday morning
+				   service run as well as the administrative tech components of the church.
+			   </p>
 	   	   </div>
 	   </div>
 	   <div class="row">
-		<h1>My Services:</h1>
+		<h1 class="text-center mt-2">My Services:</h1>
 	   </div>
 <!--        FIRST ROW OF SERVICES SECTION-->
-		<div class="row align-items-stretch mb-2">
+		<div class="row align-items-stretch m-2">
 <!--            WEB DEVELOPMENT SECTION-->
-		   <div id="webDevPrimary" class="col-md-6"  onmouseover="showDetails('webDev')" onmouseout="hideDetails('webDev')">
+		   <div id="webDevPrimary" class="col-md-3"  onmouseover="showDetails('webDev')" onmouseout="hideDetails('webDev')">
 
 					<img class="img-fluid" src="./images/webDevTitle.jpg" alt="Images of code on a screen"/>
 		   </div>
-			<div id="webDevSecondary" class="col-md-6 card" style="display:none" onmouseover="showDetails('webDev')" onmouseout="hideDetails('webDev')" >
+			<div id="webDevSecondary" class="col-md-3 card" style="display:none" onmouseover="showDetails('webDev')" onmouseout="hideDetails('webDev')" >
 
 
 					<div class="card-body">
 						<h2 class="card-title">Web Development</h2>
-						<p class="card-text">Here is where I will put more details</p>
+						<p class="card-text">
+							With formal training in web development and experience maintaining church websites, I am qualified to help get your website working for you. <br/> <br />
+							Whether you need a complete redesign or just help maintaining the current website, I am excited to work with you.
+						</p>
 					</div>
 			</div>
 <!--            AV TRAINING SECTION-->
-            <div id="avTrainingPrimary" class="col-md-6" onmouseover="showDetails('avTraining')" onmouseout="hideDetails('avTraining')">
+            <div id="avTrainingPrimary" class="col-md-3" onmouseover="showDetails('avTraining')" onmouseout="hideDetails('avTraining')">
 				<img class ="img-fluid" src="./images/trainingTitle.jpg" alt="Brandon training a sountech" />
 
             </div>
-			<div id="avTrainingSecondary" class="col-md-6 card" style="display:none" onmouseover="showDetails('avTraining')" onmouseout="hideDetails('avTraining')" >
+			<div id="avTrainingSecondary" class="col-md-3 card" style="display:none" onmouseover="showDetails('avTraining')" onmouseout="hideDetails('avTraining')" >
 				<h2 class="card-title">AV Training and Installation</h2>
 				<p class="card-text">Here is where I will put more details</p>
 			</div>
 
-	   </div>
+
 				<!--        SECOND ROW OF SERVICES SECTION-->
-				<div class="row align-items-stretch mb-2">
+
 					<!--            VIDEO PRODUCTION SECTION-->
-					<div id="videoPrimary" class="col-md-6"  onmouseover="showDetails('video')" onmouseout="hideDetails('video')">
+					<div id="videoPrimary" class="col-md-3"  onmouseover="showDetails('video')" onmouseout="hideDetails('video')">
 
 						<img class="img-fluid" src="./images/videoTitle.jpg" alt="Images of code on a screen"/>
 					</div>
-					<div id="videoSecondary" class="col-md-6 card" style="display:none" onmouseover="showDetails('video')" onmouseout="hideDetails('video')" >
+					<div id="videoSecondary" class="col-md-3 card" style="display:none" onmouseover="showDetails('video')" onmouseout="hideDetails('video')" >
 
 
 						<div class="card-body">
@@ -74,11 +73,11 @@
 						</div>
 					</div>
 					<!--            AV TRAINING SECTION-->
-					<div id="avEventPrimary" class="col-md-6" onmouseover="showDetails('avEvent')" onmouseout="hideDetails('avEvent')">
+					<div id="avEventPrimary" class="col-md-3" onmouseover="showDetails('avEvent')" onmouseout="hideDetails('avEvent')">
 						<img class ="img-fluid" src="./images/avTitle.jpg" alt="Brandon training a sountech" />
 
 					</div>
-					<div id="avEventSecondary" class="col-md-6 card" style="display:none" onmouseover="showDetails('avEvent')" onmouseout="hideDetails('avEvent')" >
+					<div id="avEventSecondary" class="col-md-3 card" style="display:none" onmouseover="showDetails('avEvent')" onmouseout="hideDetails('avEvent')" >
 						<h2 class="card-title">AV Tech for Events</h2>
 						<p class="card-text">Here is where I will put more details</p>
 					</div>
@@ -86,6 +85,10 @@
 				</div>
 	   <!-- Insert section here of referrals -->
 	   <!-- Insert Contact Section here -->
+				<h2>Contact Me</h2>
+				<div class="row">
+<!--					Enter form here-->
+				</div>
 	</div>
 	<script>
 
