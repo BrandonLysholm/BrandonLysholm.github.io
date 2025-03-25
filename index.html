@@ -85,10 +85,10 @@
 formResponse?usp=pp_url&">
                     <div class="row">
                         <div class="col">
-                            <input type="text" name="entry.882941231" placeholder="Name" class="form-control" />
+                            <input type="text" id="name" name="entry.882941231" placeholder="Name" class="form-control" />
                         </div>
                         <div class="col">
-                            <input type="email" name="entry.1790766707" placeholder="Email" class="form-control"/>
+                            <input type="email" id="email" name="entry.1790766707" placeholder="Email" class="form-control"/>
                         </div>
 
                     </div>
@@ -101,7 +101,7 @@ formResponse?usp=pp_url&">
                         <option value="avEvent">AV Events</option>
                         <option value="other">Other</option>
                     </select>
-                    <textarea name="entry.764703748" placeholder="Message" class="form-control" rows="4"></textarea>'
+                    <textarea name="entry.764703748" id="comment" placeholder="Message" class="form-control" rows="4"></textarea>'
                     <input type="submit" value="Submit" class="btn btn-primary" />
                 </form>
             </div>
@@ -120,6 +120,19 @@ formResponse?usp=pp_url&">
             $('#contactForm *').fadeOut(2000); // fading out 2s
             $('#contactForm').prepend('Your message has been sent.');
             e.preventDefault();
+            // Generating the URL:
+            myURL = 'https://docs.google.com/forms/d/e/1FAIpQLSeWum7PtCOUbsv2Lp-DBQMO6ygT5-6o24TJhzzaHJn0gkPVeA/formResponse?usp=pp_url&'
+            nameVal = 'entry.882941231'+$('#name').val();
+            emailVal = 'entry.1790766707'+$('#email').val();
+            selectVal = 'entry.1048297172'+$('#contactForm').find('option:selected').val();
+            commentVal = 'entry.764703748'+$('#comment').val();
+
+            myURL = myURL + nameVal+emailVal+selectVal+commentVal;
+
+            $.ajax({
+                type: "POST",
+                url: myURL,
+            })
         })
     </script>
     <script>
