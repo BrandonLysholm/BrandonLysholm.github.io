@@ -160,6 +160,7 @@ formResponse?usp=pp_url&">
         // Contact form - code from https://github.com/toperkin/staticFormEmails/blob/master/README.md
         let submitted = false;
         $('#contactForm').on('submit', function(e) {
+            submitted = true;
             $('#contactForm').fadeOut(2000); // fading out 2s
             $('#contactForm').prepend('Your message has been sent.');
         })
