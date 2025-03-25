@@ -119,6 +119,7 @@ formResponse?usp=pp_url&">
             submitted = true;
             $('#contactForm *').fadeOut(2000); // fading out 2s
             $('#contactForm').prepend('Your message has been sent.');
+            e.preventDefault();
         })
     </script>
     <script>
