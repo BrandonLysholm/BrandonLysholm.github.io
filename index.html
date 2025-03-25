@@ -109,6 +109,18 @@ formResponse?usp=pp_url&">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!-- adding in jquery -->
 <!--    This script handles all the javascript throughout the page-->
     <script>
+        // onload function
+        window.onload = function() {
+            window.alert('This webpage is under development');
+            // This preloads all the images, so the hovers become more responsive
+            let serviceSections = ['webDev', 'avTraining', 'videoProduction', 'avEvent'];
+            serviceSections.forEach((element) => {
+                showDetails('element');
+                hideDetails('element');
+            })
+
+        }
+
         // Function to show the details pane of whatever section calls it on mouse over event
         function showDetails(section) {
             if (section == 'webDev') {
