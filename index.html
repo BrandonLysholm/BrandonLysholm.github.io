@@ -112,6 +112,15 @@ formResponse?usp=pp_url&">
 
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!-- adding in jquery -->
+    <script type="text/javascript">var submitted=false</script>
+    <script type="text/javascript">
+        // Contact form - code from https://github.com/toperkin/staticFormEmails/blob/master/README.md
+        $('#contactForm').on('submit', function(e) {
+            submitted = true;
+            $('#contactForm *').fadeOut(2000); // fading out 2s
+            $('#contactForm').prepend('Your message has been sent.');
+        })
+    </script>
     <script>
         // Function to show the details pane of whatever section calls it on mouse over event
         function showDetails(section) {
@@ -156,14 +165,6 @@ formResponse?usp=pp_url&">
             primaryElement.removeAttribute('style')
             secondaryElement.setAttribute('style', 'display:none')
         }
-
-        // Contact form - code from https://github.com/toperkin/staticFormEmails/blob/master/README.md
-        let submitted = false;
-        $('#contactForm').on('submit', function(e) {
-            submitted = true;
-            $('#contactForm').fadeOut(2000); // fading out 2s
-            $('#contactForm').prepend('Your message has been sent.');
-        })
     </script>
 </main>
 </body>
