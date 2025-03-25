@@ -122,12 +122,17 @@ formResponse?usp=pp_url&">
             e.preventDefault();
             // Generating the URL:
             myURL = 'https://docs.google.com/forms/d/e/1FAIpQLSeWum7PtCOUbsv2Lp-DBQMO6ygT5-6o24TJhzzaHJn0gkPVeA/formResponse?usp=pp_url&'
-            nameVal = 'entry.882941231'+$('#name').val();
-            emailVal = 'entry.1790766707'+$('#email').val();
-            selectVal = 'entry.1048297172'+$('#contactForm').find('option:selected').val();
-            commentVal = 'entry.764703748'+$('#comment').val();
+            uneditedName = $('#name').val();
+            cleanedName = uneditedName.replaceAll(' ', '+');
+            nameVal = 'entry.882941231='+cleanedName;
+            emailVal = 'entry.1790766707='+$('#email').val();
+            selectVal = 'entry.1048297172='+$('#contactForm').find('option:selected').val();
+            cleanComment = ($('#comment').val()).replaceAll(' ','+');
+            commentVal = 'entry.764703748='+cleanComment;
 
-            myURL = myURL + nameVal+emailVal+selectVal+commentVal;
+            myURL = myURL + nameVal+'&'+emailVal+'&'+selectVal+'&'+commentVal;
+
+            console.log(myURL);
 
             $.ajax({
                 type: "POST",
