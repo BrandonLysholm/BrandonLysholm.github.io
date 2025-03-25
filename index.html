@@ -20,8 +20,8 @@
                 <h1>Brandon Lysholm</h1>
                 <h5>Web Developer and AV Tech that specializes in meeting the unique tech needs of churches.</h5>
                 <p>
-                    If you need help getting the tech needs of your churches under control, I can help. I am skilled in the tech booth that helps make the Sunday morning
-                    service run as well as the administrative tech components of the church.
+                    My approach for helping churches is to meet the church where they are at, address their pressing concerns
+                    and provide a roadmap for the future.
                 </p>
             </div>
         </div>
@@ -105,41 +105,12 @@ formResponse?usp=pp_url&">
                     <input type="submit" value="Submit" class="btn btn-primary" />
                 </form>
             </div>
-
-            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
         </div>
 
 
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!-- adding in jquery -->
-    <script type="text/javascript">var submitted=false</script>
-    <script type="text/javascript">
-        // Contact form - code from https://github.com/toperkin/staticFormEmails/blob/master/README.md
-        $('#contactForm').on('submit', function(e) {
-            submitted = true;
-            $('#contactForm *').fadeOut(2000); // fading out 2s
-            $('#contactForm').prepend('Your message has been sent.');
-            e.preventDefault();
-            // Generating the URL:
-            myURL = 'https://docs.google.com/forms/d/e/1FAIpQLSeWum7PtCOUbsv2Lp-DBQMO6ygT5-6o24TJhzzaHJn0gkPVeA/formResponse?usp=pp_url&'
-            uneditedName = $('#name').val();
-            cleanedName = uneditedName.replaceAll(' ', '+');
-            nameVal = 'entry.882941231='+cleanedName;
-            emailVal = 'entry.1790766707='+$('#email').val();
-            selectVal = 'entry.1048297172='+$('#contactForm').find('option:selected').val();
-            cleanComment = ($('#comment').val()).replaceAll(' ','+');
-            commentVal = 'entry.764703748='+cleanComment;
 
-            myURL = myURL + nameVal+'&'+emailVal+'&'+selectVal+'&'+commentVal;
-
-            console.log(myURL);
-
-            $.ajax({
-                type: "POST",
-                url: myURL,
-            })
-        })
-    </script>
     <script>
         // Function to show the details pane of whatever section calls it on mouse over event
         function showDetails(section) {
@@ -184,6 +155,28 @@ formResponse?usp=pp_url&">
             primaryElement.removeAttribute('style')
             secondaryElement.setAttribute('style', 'display:none')
         }
+
+        // Function to submit the form while also preventing page refresh
+        $('#contactForm').on('submit', function(e) {
+            // This is for displaying message
+            $('#contactForm *').fadeOut(2000); // fading out 2s
+            $('#contactForm').prepend('Your message has been sent.');
+            // THis prevents the redirect
+            e.preventDefault();
+            // Generating the URL:
+            let myURL = 'https://docs.google.com/forms/d/e/1FAIpQLSeWum7PtCOUbsv2Lp-DBQMO6ygT5-6o24TJhzzaHJn0gkPVeA/formResponse?usp=pp_url&'
+            let nameVal = 'entry.882941231='+($('#name').val()).replaceAll(' ', '+');
+            let emailVal = 'entry.1790766707='+$('#email').val();
+            let selectVal = 'entry.1048297172='+$('#contactForm').find('option:selected').val();
+
+            myURL += nameVal+'&'+emailVal+'&'+selectVal+'&'+($('#comment').val()).replaceAll(' ','+');
+
+            // This submits the data
+            $.ajax({
+                type: "POST",
+                url: myURL,
+            })
+        })
     </script>
 </main>
 </body>
