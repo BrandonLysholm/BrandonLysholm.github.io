@@ -191,11 +191,31 @@ formResponse?usp=pp_url&">
 
             myURL += nameVal+'&'+emailVal+'&'+selectVal+'&'+commentVal;
 
+
             // This submits the data
             $.ajax({
                 type: "POST",
+                // Attempting to fix the CORS issue with the following:
+                headers: {"Access-Control-Allow-Origin": "https://docs.google.com/forms/*",},
+                // crossDomain: true,
                 url: myURL,
+                // Status codes appear to not be working - checked with the console logs
+                // If I use the success or failure settings, it appears that 200 comes in as failure as
+                // well due to CORS causing issues. I need to fix CORS to get this fully working
+                statusCode: {
+                    // Failure
+                    400: function() {
+                        console.log('Form failed');
+                        // $('#contactForm').prepend('Your message has failed.');
+                    },
+                    // Success
+                    200: function() {
+                        console.log('Form succeeded');
+                        // $('#contactForm').prepend('Your message has been sent.');
+                    }
+                }
             })
+
         })
     </script>
 </main>
