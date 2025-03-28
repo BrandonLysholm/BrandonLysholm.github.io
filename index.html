@@ -13,7 +13,7 @@
         <!-- OVERVIEW ROW-->
         <div class="row justify-content-center m-3">
             <div class="col-md-2">
-                <img class="img-fluid" src="./images/placeholder.png" alt="Image of Brandon" />
+                <img class="img-fluid" src="./images/lowResPortrait.jpg" alt="Image of Brandon" />
             </div>
             <div class="col-md-5">
                 <h1>Brandon Lysholm</h1>
@@ -47,30 +47,40 @@
                 <img class ="img-fluid" src="./images/trainingTitle.jpg" alt="Brandon training a sountech" />
             </div>
             <div id="avTrainingSecondary" class="col-md-3 card" style="display:none" onmouseover="showDetails('avTraining')" onmouseout="hideDetails('avTraining')" >
-                <h2 class="card-title">AV Training and Installation</h2>
-                <p class="card-text">Here is where I will put more details</p>
+                <div class="card-body">
+                    <h2 class="card-title">AV Training and Installation</h2>
+                    <p class="card-text">
+                        If your tech team needs further training, I am open to hosting a training workshop to help
+                        them. My experience in training techs in church settings helps me understand how best to train
+                        techs as well as what features of their equipment actually matters for running a smooth church
+                        service.
+                    </p>
+                </div>
             </div>
             <!--VIDEO PRODUCTION SECTION-->
             <div id="videoPrimary" class="col-md-3"  onmouseover="showDetails('video')" onmouseout="hideDetails('video')">
-
                 <img class="img-fluid" src="./images/videoTitle.jpg" alt="Images of code on a screen"/>
             </div>
             <div id="videoSecondary" class="col-md-3 card" style="display:none" onmouseover="showDetails('video')" onmouseout="hideDetails('video')" >
-
-
                 <div class="card-body">
                     <h2 class="card-title">Video Production</h2>
-                    <p class="card-text">Here is where I will put more details</p>
+                    <p class="card-text">
+                        I have done both pre-recorded videos and livestreaming.
+                    </p>
                 </div>
             </div>
-            <!--            AV TRAINING SECTION-->
+            <!--AV TRAINING SECTION-->
             <div id="avEventPrimary" class="col-md-3" onmouseover="showDetails('avEvent')" onmouseout="hideDetails('avEvent')">
                 <img class ="img-fluid" src="./images/avTitle.jpg" alt="Brandon training a sountech" />
-
             </div>
             <div id="avEventSecondary" class="col-md-3 card" style="display:none" onmouseover="showDetails('avEvent')" onmouseout="hideDetails('avEvent')" >
-                <h2 class="card-title">AV Tech for Events</h2>
-                <p class="card-text">Here is where I will put more details</p>
+                <div class="card-body">
+                    <h2 class="card-title">AV Tech for Events</h2>
+                    <p class="card-text">
+                        I am experienced handling the tech for various events. If you need someone to help do sound
+                        or livestream for an event, I am excited to work with you.
+                    </p>
+                </div>
             </div>
 
         </div>
@@ -97,7 +107,7 @@ formResponse?usp=pp_url&">
                         <option value="avTraining">AV Training</option>
                         <option value="videoProduction">Video Production</option>
                         <option value="avEvent">AV Events</option>
-                        <option value="other">Other</option>
+                        <option value="other">Other (Currently broken)</option>
                     </select>
                     <textarea name="entry.764703748" id="comment" placeholder="Message" class="form-control mb-1" rows="4"></textarea>'
                     <input type="submit" value="Submit" class="btn btn-primary" />
