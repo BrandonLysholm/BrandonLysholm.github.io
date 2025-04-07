@@ -1,0 +1,4 @@
+/*Overrides the default bootstrap navbar height, to create a consistent height for my navbar*/
+.navbar-fixed-height {
+    height: 40px
+}
