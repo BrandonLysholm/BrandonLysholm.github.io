@@ -128,7 +128,17 @@
                         </p>
                     </blockquote>
                     <figcaption class="blockquote-footer">
-                        <strong>Tyrone Dyck</strong><cite>College Ambassador, Horizon College & Seminary</cite>
+                        <strong>Tyrone Dyck </strong><cite>College Ambassador, Horizon College & Seminary</cite>
+                    </figcaption>
+                </figure>
+                <figure class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p>
+                            Brandon went above and beyond to design a system that is perfect for us now and left us lots of room to expand in the future!
+                        </p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                        <strong>Austin Gagne </strong><cite>Lead Pastor, Delisle Community Church</cite>
                     </figcaption>
                 </figure>
             </div>
@@ -169,7 +179,15 @@ formResponse?usp=pp_url&">
     <script>
         // onload function
         window.onload = function() {
-            window.alert('This webpage is under development');
+            let cookie = document.cookie;
+            if (!cookie){
+                window.alert('This webpage is under development');
+            }
+
+            // creating a cookie so that it does not keep showing the under development alert, the cookie is a session cookie
+            document.cookie = "loaded=true";
+
+
             // This preloads all the images, so the hovers become more responsive
             let serviceSections = ['webDev', 'avTraining', 'videoProduction', 'avEvent'];
             serviceSections.forEach((element) => {
@@ -227,9 +245,10 @@ formResponse?usp=pp_url&">
         $('#contactForm').on('submit', function(e) {
             // This is for displaying message
             $('#contactForm *').fadeOut(1000); // fading out 1s
-            $('#contactForm').prepend('Your message has been sent.');
+            $('#contactForm').prepend('Your message has been sent. If you do not hear back in three business days, please reach out directly to BrandonLysholm@gmail.com');
             // THis prevents the redirect
             e.preventDefault();
+
             // Generating the URL:
             let myURL = 'https://docs.google.com/forms/d/e/1FAIpQLSeWum7PtCOUbsv2Lp-DBQMO6ygT5-6o24TJhzzaHJn0gkPVeA/formResponse?usp=pp_url&'
             let nameVal = 'entry.882941231='+($('#name').val()).replaceAll(' ', '+');
