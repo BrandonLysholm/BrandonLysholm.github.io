@@ -3,4 +3,7 @@
     .navbar-fixed-height {
         height: 40px
     }
+    .mynav-text-center {
+        text-align: center
+    }
 }
