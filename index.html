@@ -4,79 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brandon Lysholm's Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./styles/my_navbar.css">
 </head>
 <body>
 <main>
 <!--    Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-0">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary py-0">
         <div class="container-fluid">
-            <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarSupportedContent">
+            <div class="container vstack d-md-none">
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle Navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse justify-content-center d-md-flex" id="navbarNavAltMarkup">
                 <ul class="navbar-nav">
-                    <li class="nav-item text-center">
+                    <li class="text-center">
                         <a class="nav-link" aria-current="page" href="web_dev.html">Web Development</a>
                     </li>
-                    <img src="images/divider.jpg" class="flex-shrink"/>
-                    <li class="nav-item text-center">
+                    <img src="images/divider.jpg" class="d-none d-md-block flex-shrink"/>
+                    <li class="text-center">
                         <a class="nav-link" aria-current="page" href="av_training.html">AV Training and Installation</a>
                     </li>
-                    <img src="images/divider.jpg" class="flex-shrink"/>
-                    <li class="nav-item text-center">
+                    <img src="images/divider.jpg" class="d-none d-md-block flex-shrink"/>
+                    <li class="text-center">
                         <a class="nav-link active" aria-current="page" href="#"><strong>Home</strong></a>
                     </li>
-                    <img src="images/divider.jpg" class="flex-shrink"/>
-                    <li class="nav-item text-center">
+                    <img src="images/divider.jpg" class="d-none d-md-block flex-shrink"/>
+                    <li class="text-center">
                         <a class="nav-link" aria-current="page" href="video.html">Video Production</a>
                     </li>
-                    <img src="images/divider.jpg" class="flex-shrink"/>
-                    <li class="nav-item text-center">
+                    <img src="images/divider.jpg" class="d-none d-md-block flex-shrink"/>
+                    <li class="text-center">
                         <a class="nav-link" aria-current="page" href="av_events.html">AV Tech for Events</a>
                     </li>
                 </ul>
             </div>
         </div>
+        </div>
     </nav>
     <div>
         <!-- OVERVIEW ROW-->
         <div class="row justify-content-center m-3">
-            <div class="col-md-2">
+            <div class="col-md-2 col-sm-12">
                 <img class="img-fluid" src="./images/lowResPortrait.jpg" alt="Image of Brandon" />
             </div>
-            <div class="col-md-5">
+            <div class="col-md-5 col-sm-12">
                 <h1>Brandon Lysholm</h1>
-                <h5>Web Developer and AV Tech that specializes in meeting the unique tech needs of churches.</h5>
+                <h5>Web Developer and AV Tech specializing in meeting the unique tech needs of churches.</h5>
                 <p>
-                    My approach for helping churches is to meet the church where they are at, address their pressing concerns
+                    My approach is to meet the church where they are at, address their most pressing concerns,
                     and provide a roadmap for the future. <br /> <br />
                     <a class="btn btn-primary" href="my_credentials.html">Learn More</a>
                 </p>
             </div>
         </div>
-        <div class="row">
+        <div>
             <h1 class="text-center mt-2">My Services:</h1>
         </div>
         <!-- SERVICES SECTION-->
         <div class="row align-items-stretch m-2">
             <!--WEB DEVELOPMENT SECTION-->
-            <div id="webDevPrimary" class="col-md-3"  onmouseover="showDetails('webDev')" onmouseout="hideDetails('webDev')">
+            <div id="webDevPrimary" class="col-md-3 mb-2"  onmouseover="showDetails('webDev')" onmouseout="hideDetails('webDev')">
                 <img class="img-fluid" src="./images/webDevTitle.jpg" alt="Images of code on a screen"/>
             </div>
-            <div id="webDevSecondary" class="col-md-3 card" style="display:none" onmouseover="showDetails('webDev')" onmouseout="hideDetails('webDev')" >
+            <div id="webDevSecondary" class="col-md-3 card" style="display:none" onmouseover="showDetails('webDev')" onmouseout="hideDetails('webDev')" onclick="location.href='web_dev.html'">
                 <div class="card-body">
                     <h2 class="card-title">Web Development</h2>
                     <p class="card-text">
-                        With formal training in web development and experience maintaining church websites, I am qualified to help get your website working for you. <br/> <br />
-                        Whether you need a complete redesign or just help maintaining the current website, I am excited to work with you.
+                        With formal training in web development and experience building and maintaining church and other websites, I am qualified to help get your website working for you. <br/> <br />
+                        Whether you need a complete redesign or help maintaining your current website, I am excited to partner with you.
                     </p>
                 </div>
             </div>
             <!--AV TRAINING SECTION-->
-            <div id="avTrainingPrimary" class="col-md-3" onmouseover="showDetails('avTraining')" onmouseout="hideDetails('avTraining')">
+            <div id="avTrainingPrimary" class="col-md-3 mb-2" onmouseover="showDetails('avTraining')" onmouseout="hideDetails('avTraining')">
                 <img class ="img-fluid" src="./images/trainingTitle.jpg" alt="Brandon training a sountech" />
             </div>
-            <div id="avTrainingSecondary" class="col-md-3 card" style="display:none" onmouseover="showDetails('avTraining')" onmouseout="hideDetails('avTraining')" >
+            <div id="avTrainingSecondary" class="col-md-3 card" style="display:none" onmouseover="showDetails('avTraining')" onmouseout="hideDetails('avTraining')" onclick="location.href='av_training.html'">
                 <div class="card-body">
                     <h2 class="card-title">AV Training and Installation</h2>
                     <p class="card-text">
@@ -84,66 +94,40 @@
                         them. My experience in training techs in church settings helps me understand how best to train
                         techs as well as what features of their equipment actually matters for running a smooth church
                         service.
+                        <br /> <br />
+                        If you are looking at doing a system overhaul, I can create a solution tailored to meet your needs. My approach focuses
+                        on building up and empowering your volunteer team to do the job, rather than doing it all myself.
                     </p>
                 </div>
             </div>
             <!--VIDEO PRODUCTION SECTION-->
-            <div id="videoPrimary" class="col-md-3"  onmouseover="showDetails('video')" onmouseout="hideDetails('video')">
+            <div id="videoPrimary" class="col-md-3 mb-2"  onmouseover="showDetails('video')" onmouseout="hideDetails('video')">
                 <img class="img-fluid" src="./images/videoTitle.jpg" alt="Images of code on a screen"/>
             </div>
-            <div id="videoSecondary" class="col-md-3 card" style="display:none" onmouseover="showDetails('video')" onmouseout="hideDetails('video')" >
+            <div id="videoSecondary" class="col-md-3 card" style="display:none" onmouseover="showDetails('video')" onmouseout="hideDetails('video')" onclick="location.href='video.html'">
                 <div class="card-body">
                     <h2 class="card-title">Video Production</h2>
                     <p class="card-text">
-                        I have done both pre-recorded videos and livestreaming.
+                        If your church wants to expand your video needs, whether it is livestreaming or recording videos, I am excited to partner with you.
                     </p>
                 </div>
             </div>
             <!--AV TRAINING SECTION-->
-            <div id="avEventPrimary" class="col-md-3" onmouseover="showDetails('avEvent')" onmouseout="hideDetails('avEvent')">
+            <div id="avEventPrimary" class="col-md-3 mb-2" onmouseover="showDetails('avEvent')" onmouseout="hideDetails('avEvent')">
                 <img class ="img-fluid" src="./images/avTitle.jpg" alt="Brandon training a sountech" />
             </div>
-            <div id="avEventSecondary" class="col-md-3 card" style="display:none" onmouseover="showDetails('avEvent')" onmouseout="hideDetails('avEvent')" >
+            <div id="avEventSecondary" class="col-md-3 card" style="display:none" onmouseover="showDetails('avEvent')" onmouseout="hideDetails('avEvent')" onclick="location.href='av_events.html'">
                 <div class="card-body">
                     <h2 class="card-title">AV Tech for Events</h2>
                     <p class="card-text">
-                        I am experienced handling the tech for various events. If you need someone to help do sound
-                        or livestream for an event, I am excited to work with you.
+                        I am experienced in handling the tech for various events. If you need someone to help do sound
+                        or livestream for an event, I am excited to partner with you.
                     </p>
                 </div>
             </div>
         </div>
-        <!-- Insert section here of referrals -->
-        <div class="row text-center">
-            <h1>Reviews</h1>
-        </div>
-        <div class="container">
-            <div class="row">
-                <figure class="col-md-4">
-                    <blockquote class="blockquote">
-                        <p>
-                            Brandon has done a phenomenal job 2 years in a row managing the sound, lights, and tech at
-                            Horizon's NRG Youth Conference. From knowledgeable and efficient setup to managing live performances,
-                            he demonstrated high capacity and creativity and I would highly recommend him in this field!
-                        </p>
-                    </blockquote>
-                    <figcaption class="blockquote-footer">
-                        <strong>Tyrone Dyck </strong><cite>College Ambassador, Horizon College & Seminary</cite>
-                    </figcaption>
-                </figure>
-                <figure class="col-md-4">
-                    <blockquote class="blockquote">
-                        <p>
-                            Brandon went above and beyond to design a system that is perfect for us now and left us lots of room to expand in the future!
-                        </p>
-                    </blockquote>
-                    <figcaption class="blockquote-footer">
-                        <strong>Austin Gagne </strong><cite>Lead Pastor, Delisle Community Church</cite>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
         <!-- Contact Section-->
+        <div class="container">
         <div class="row justify-content-center mt-3 mb-2">
             <div class="col-md-6">
                 <h2>Contact</h2>
@@ -172,6 +156,55 @@ formResponse?usp=pp_url&">
                 </form>
             </div>
         </div>
+        </div>
+        <!-- Reviews Section -->
+        <div class="text-center">
+            <h1>Reviews</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <figure class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p>
+                            Brandon has done a phenomenal job 2 years in a row managing the sound, lights, and tech at
+                            Horizon's NRG Youth Conference. From knowledgeable and efficient setup to managing live performances,
+                            he demonstrated high capacity and creativity and I would highly recommend him in this field!
+                        </p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                        <strong>Tyrone Dyck </strong><cite>College Ambassador, Horizon College & Seminary</cite>
+                    </figcaption>
+                </figure>
+                <figure class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p>
+                            Brandon went above and beyond in designing a presentation system that not only meets our current needs
+                            but also leaves room for future growth. He took the time to understand our previous setup, listened carefully
+                            to our hopes and challenges, and crafted a solution tailored to us. What stood out most was his attention to
+                            detail—not just in the design, but in making sure we understood how everything fits and functions. Brandon also
+                            led our volunteer team through the installation process, building shared knowledge and ownership of our tech booth.
+                            We’re incredibly grateful for his expertise, patience, and investment in our team. If you're looking to improve your
+                            church tech and equip your volunteers, we highly recommend Brandon.
+                        </p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                        <strong>Austin Gagne </strong><cite>Lead Pastor, Delisle Community Church</cite>
+                    </figcaption>
+                </figure>
+                <figure class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p>
+                            We had a training session with Brandon. We had a mix of those who had never touched a sound board to our current sound techs. Everyone
+                            said they learned something. I highly recommend Brandon if you are interested in a church sound training session. Knowledgeable, engaging, able to adapt his
+                            teaching to the needs of the participants and church.
+                        </p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                        <strong>Greg Dermody </strong><cite>Lead Pastor, Humboldt Alliance Church</cite>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
 
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!-- adding in jquery -->
@@ -179,15 +212,6 @@ formResponse?usp=pp_url&">
     <script>
         // onload function
         window.onload = function() {
-            let cookie = document.cookie;
-            if (!cookie){
-                window.alert('This webpage is under development');
-            }
-
-            // creating a cookie so that it does not keep showing the under development alert, the cookie is a session cookie
-            document.cookie = "loaded=true";
-
-
             // This preloads all the images, so the hovers become more responsive
             let serviceSections = ['webDev', 'avTraining', 'videoProduction', 'avEvent'];
             serviceSections.forEach((element) => {
@@ -219,7 +243,7 @@ formResponse?usp=pp_url&">
             }
             primaryElement.setAttribute('style', 'display:none')
             secondaryElement.removeAttribute('style')
-            secondaryElement.setAttribute('style', "background: url('"+imgPath+"'); background-color: rgba(255,255,255,0.6);  background-size: cover; background-blend-mode: lighten;) ")
+            secondaryElement.setAttribute('style', "background: url('"+imgPath+"'); background-color: rgba(255,255,255,0.7);  background-size: cover; background-blend-mode: lighten;) ")
         }
 
         // function to hide the details pane of whatever section calls it on mouse leave event
@@ -241,32 +265,9 @@ formResponse?usp=pp_url&">
             secondaryElement.setAttribute('style', 'display:none')
         }
 
-        // Function to submit the form while also preventing page refresh
-        $('#contactForm').on('submit', function(e) {
-            // This is for displaying message
-            $('#contactForm *').fadeOut(1000); // fading out 1s
-            $('#contactForm').prepend('Your message has been sent. If you do not hear back in three business days, please reach out directly to BrandonLysholm@gmail.com');
-            // THis prevents the redirect
-            e.preventDefault();
-
-            // Generating the URL:
-            let myURL = 'https://docs.google.com/forms/d/e/1FAIpQLSeWum7PtCOUbsv2Lp-DBQMO6ygT5-6o24TJhzzaHJn0gkPVeA/formResponse?usp=pp_url&'
-            let nameVal = 'entry.882941231='+($('#name').val()).replaceAll(' ', '+');
-            let emailVal = 'entry.1790766707='+$('#email').val();
-            let selectVal = 'entry.1048297172='+$('#contactForm').find('option:selected').val();
-            let commentVal = 'entry.764703748='+($('#comment').val()).replaceAll(' ','+');
-
-            myURL += nameVal+'&'+emailVal+'&'+selectVal+'&'+commentVal;
-
-
-            // This submits the data
-            $.ajax({
-                type: "POST",
-                url: myURL,
-            })
-
-        })
     </script>
+    <!--    Importing my form script-->
+    <script src="scripts/form.js"></script>
 </main>
 </body>
 </html>

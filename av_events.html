@@ -12,13 +12,11 @@
 <!--    Navbar-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary navbar-fixed-height">
     <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item text-center">
                     <a class="nav-link " aria-current="page" href="index.html"> < Back</a>
                 </li>
             </ul>
-        </div>
     </div>
 </nav>
 <div class="container">
@@ -30,6 +28,39 @@
             <li>adaptable to changing demands</li>
         </ul>
     </p>
+
+    <!-- Contact Section-->
+    <div class="row justify-content-center mt-3 mb-2">
+        <div class="col-md-6">
+            <h2>Contact</h2>
+            <form id="contactForm" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeWum7PtCOUbsv2Lp-DBQMO6ygT5-6o24TJhzzaHJn0gkPVeA/
+formResponse?usp=pp_url&">
+                <div class="row mb-1">
+                    <div class="col">
+                        <input type="text" id="name" name="entry.882941231" placeholder="Name" class="form-control" />
+                    </div>
+                    <div class="col">
+                        <input type="email" id="email" name="entry.1790766707" placeholder="Email" class="form-control"/>
+                    </div>
+
+                </div>
+
+                <select name="entry.1048297172" class="form-control mb-1">
+                    <option value="none"> -- Service -- </option>
+                    <option value="webDev">Web Development</option>
+                    <option value="avTraining">AV Training</option>
+                    <option value="videoProduction">Video Production</option>
+                    <option value="avEvent" selected>AV Events</option>
+                    <option value="other">Other</option>
+                </select>
+                <textarea name="entry.764703748" id="comment" placeholder="Message" class="form-control mb-1" rows="4"></textarea>'
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </form>
+        </div>
+    </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!-- adding in jquery -->
+<!--    Importing my form script-->
+<script src="scripts/form.js"></script>
 </body>
 </html>
