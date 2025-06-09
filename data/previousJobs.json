@@ -1,0 +1,66 @@
+[
+  {
+    "org": "Westgate Alliance Church",
+    "projectType": "Video Production",
+    "projectTitle": "Mother's Day Video",
+    "projectDesc": "Created video for mother's day",
+    "date": "20220511",
+    "media": ""
+  },
+  {
+    "org": "Westgate Alliance Church",
+    "projectType": "Video Production",
+    "projectTitle": "Arviat Mission's Trip Testimony Video",
+    "projectDesc": "created video of people sharing their testimony from missions trip to Arviat",
+    "date": "20241015",
+    "media": ""
+  },
+  {
+    "org": "Delisle Community Church",
+    "projectType": "avInstall",
+    "projectTitle": "Livestream System Upgrade",
+    "projectDesc": "Redesigned their livestream setup",
+    "date": "20250327",
+    "media": "./images/deliseSetup.HEIC"
+  },
+  {
+    "org": "Westgate Alliance Church",
+    "projectType": "sysAdmin",
+    "projectTitle": "Remote and Collaborative Work Setup",
+    "projectDesc": "Set up ability for staff to work remotely and collaboratively",
+    "date": "20250424",
+    "media": ""
+  },
+  {
+    "org": "Humboldt Alliance Church",
+    "projectType": "avTraining",
+    "projectTitle": "Hosted Audio Training Workshop",
+    "projectDesc": "Hosted an audio training workshop",
+    "date": "20250510",
+    "media": "./images/humboldtTraining.jpg"
+  },
+  {
+    "org": "Westgate Alliance Church",
+    "projectType": "avInstall",
+    "projectTitle": "Building Video Broadcast System",
+    "projectDesc": "Installed system to broadcast video to several points in the church building",
+    "date": "20250522",
+    "media": ""
+  },
+  {
+    "org": "Lakeview Church",
+    "projectType": "avEvents",
+    "projectTitle": "Lighting Tech for Dance Recitals",
+    "projectDesc": "Operated lighting for dance recital rentals at Lakeview Church",
+    "date": "20250608",
+    "media": ""
+  },
+  {
+  "org": "",
+  "projectType": "",
+  "projectTitle": "",
+  "projectDesc": "",
+  "date": "",
+  "media": ""
+  }
+]
